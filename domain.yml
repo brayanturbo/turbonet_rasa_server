@@ -1,0 +1,35 @@
+version: "3.1"
+
+intents:
+  - saudacao
+  - encerramento
+  - afirmativa
+  - negando
+  - boleto
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  # utter_cheer_up:
+  # - text: "Aqui algo para alegrar:"
+    # image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Isso foi útil?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Até mais"
+
+  utter_iamabot:
+  - text: "Eu sou um bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

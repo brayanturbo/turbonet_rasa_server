@@ -1,0 +1,143 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - Oi
+    - Olá
+    - Eai
+    - Olá, tudo bem ?
+    - Bom dia
+    - Boa tarde
+    - Boa noite
+    - Bom dia, tudo bem ?
+    - Boa tarde, tudo bem ?
+    - Boa noite, tudo bem ?
+
+- intent: encerramento
+  examples: |
+    - tchau
+    - obrigado
+    - Até mais
+    - Boa noite
+    - Tudo bem, aguardo
+    - Apenas isso
+    - Tenha um bom dia
+    - Retorno mais tarde
+    - tchau tchau
+    - encerrar
+    - ok, obrigado
+    - ok, obg
+    - Excelente
+    - Normal
+    - Ruim
+
+- intent: afirmativa
+  examples: |
+    - Sim
+    - s
+    - sim
+    - claro
+    - isso
+    - isso mesmo
+
+- intent: negando
+  examples: |
+    - não
+    - n
+    - Nunca
+    - Acho que nao
+    - nao
+    - Sem chance
+    - Na verdade não
+
+# Intenções Financeiro
+
+- intent: boleto
+  examples: |
+    - quero a segunda via
+    - queria meu boleto
+    - pode me mandar meu boleto ?
+    - quero a fatura vencida
+    - pode me mandar a linha digitavel
+    - queria o boleto para pagar
+    - não recebi o boleto
+    - Como faço para receber o boleto desse mês
+    - me envia o boleto, por favor
+    - queria pagar a parcela
+    - tem como me mandar a fatura vencida
+    - me envia o boleto
+    - como faço para receber o boleto
+    - não recebi o boleto da internet
+
+- intent: reagendar_pagamento
+  examples: |
+    - Preciso reagendar o pagamento do boleto de internet.
+    - É possível adiar o pagamento da fatura ?
+    - Pode me ajudar a reagendar o pagamento do boleto de internet?
+    - Tem como modificar a data de vencimento do meu boleto ?
+    - Gostaria de adiar a data de vencimento do boleto da internet.
+
+- intent: envio_comprovante
+  examples: |
+    - Quero enviar o comprovante do pagamento da internet.
+    - Apenas enviando o comprovante
+    - Posso enviar o comprovante de pagamento da minha internet?
+    - Gostaria de encaminhar o comprovante do boleto que paguei.
+    - Só quero enviar o comprovante do pagamento da fatura de internet.
+    - Posso enviar o recibo do boleto de internet que acabei de pagar?
+    - Quero enviar o comprovante para confirmar o pagamento.
+
+- intent: consulta_vencidas
+  examples: |
+    - Quero ver quantas estou devendo
+    - Pode me informar quantas faturas tenho atrasado ?
+    - Queria verificar meu saldo antes de pagar o boleto.
+
+- intent: negociacao_divida
+  examples: |
+    - Estou com dificuldades financeiras, podemos negociar minha dívida?
+    - É possível renegociar meu débito
+
+# Outras Intenções
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - Você é um robô?
+    - Você é humano?
+    - Estou falando com um bot?
+    - Estou falando com um humano?

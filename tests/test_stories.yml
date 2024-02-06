@@ -1,0 +1,91 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+- story: happy path 1
+  steps:
+  - user: |
+      Boa tarde!
+    intent: saudacao
+  - action: utter_greet
+  - user: |
+      Maravilha
+    intent: mood_great
+  - action: utter_happy
+
+- story: happy path 2
+  steps:
+  - user: |
+      Olá!
+    intent: saudacao
+  - action: utter_greet
+  - user: |
+      Muito bem
+    intent: mood_great
+  - action: utter_happy
+  - user: |
+      Apenas isso, obrigado!
+    intent: encerramento
+  - action: utter_goodbye
+
+- story: sad path 1
+  steps:
+  - user: |
+      Olá
+    intent: saudacao
+  - action: utter_greet
+  - user: |
+      nada bem
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      sim
+    intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - user: |
+      Oi
+    intent: saudacao
+  - action: utter_greet
+  - user: |
+      não
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      na verdade não
+    intent: deny
+  - action: utter_goodbye
+
+- story: sad path 3
+  steps:
+  - user: |
+      Eai
+    intent: saudacao
+  - action: utter_greet
+  - user: |
+      muito mal
+    intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - user: |
+      não
+    intent: deny
+  - action: utter_goodbye
+
+- story: say encerramento
+  steps:
+  - user: |
+      tenha uma ótima tarde
+    intent: encerramento
+  - action: utter_goodbye
+
+- story: bot challenge
+  steps:
+  - user: |
+      Vc é um robô ?
+    intent: bot_challenge
+  - action: utter_iamabot
